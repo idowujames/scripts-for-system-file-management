@@ -7,6 +7,5 @@ As part of automating task on my local system, I'm making a couple of fun short 
 I belive alot of people have made scripts like this as I'm guessing this types of redundant tasks have being around since the dawn of time but the direct inspiration for this utility scripts come from Patrick Loeber of the [Python Engineer](https://www.youtube.com/c/pythonengineer) youtube channel.
 
 
-Needless to say, the scripts are free to use and expand as needed :grin: 
 
 Running the scripts as cron jobs makes life alot easier as well :wink:
