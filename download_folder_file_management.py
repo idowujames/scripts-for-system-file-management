@@ -1,5 +1,8 @@
 import os
 import shutil
+import logging
+
+logging.basicConfig(level=logging.INFO ,filename='file_management_script\logfile.log', format='%(asctime)s :: %(levelname)s :: %(message)s')
 
 os.chdir('C:/Users/DELL/Downloads')
 
@@ -48,7 +51,14 @@ def file_type(file):
     elif ext in zips:
         shutil.move(file, f'{path}/zips')
 
-create_folders()
-for file in os.listdir():
-    file_type(file)
+try:
+    create_folders()
+    for file in os.listdir():
+        file_type(file)
 
+    logging.info('Script ran successfully') 
+
+
+except Exception as e:
+    logging.exception("Script encountered an error")
+    raise e
