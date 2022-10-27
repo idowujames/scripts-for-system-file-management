@@ -3,10 +3,10 @@ import shutil
 import logging
 
 logging.basicConfig(
-                        level=logging.INFO ,
-                        filename='file_management_script\logfile.log', 
-                        format='%(asctime)s :: %(levelname)s :: %(message)s'
-                    )
+    level=logging.INFO ,
+    filename='file_management_script\logfile.log',
+    format='%(asctime)s :: %(levelname)s :: %(message)s'
+    )
 
 ## Changing directory to point to the downloads folder
 os.chdir('C:/Users/DELL/Downloads')
@@ -37,7 +37,7 @@ jupyter_notes = ['.ipynb']
 
 
 ## Folders for each file extension
-folders = ['software','audio','video','images','documents','zips','jupyter_notebooks']
+folders = ['Software','Audio','Video','Images','Documents','Zips','Jupyter_Notebooks']
 
 
 ## Saving current working directory to variable
@@ -55,19 +55,19 @@ def create_folders():
 def file_type(file):
     ext = os.path.splitext(file)[1]
     if ext in software:
-        shutil.move(file, f'{path}/software')
+        shutil.move(file, f'{path}/Software')
     elif ext in video:
-        shutil.move(file, f'{path}/video')
+        shutil.move(file, f'{path}/Video')
     elif ext in audio:
-        shutil.move(file, f'{path}/audio')
+        shutil.move(file, f'{path}/Audio')
     elif ext in img:
-        shutil.move(file, f'{path}/images')
+        shutil.move(file, f'{path}/Images')
     elif ext in documents:
-        shutil.move(file, f'{path}/documents')
+        shutil.move(file, f'{path}/Documents')
     elif ext in zips:
-        shutil.move(file, f'{path}/zips')
+        shutil.move(file, f'{path}/Zips')
     elif ext in jupyter_notes:
-        shutil.move(file, f'{path}/jupyter_notebooks')
+        shutil.move(file, f'{path}/Jupyter_Notebooks')
         
 
 
