@@ -31,11 +31,13 @@ documents = [".csv", ".doc", ".docx", ".pdf", ".ppt", ".pptx",
        ".xls", ".xlsx", ".txt"]
 
 zips = ['.zip']
+
+jupyter_notes = ['.ipynb']
 ## End List of extensions
 
 
 ## Folders for each file extension
-folders = ['software','audio','video','images','documents','zips']
+folders = ['software','audio','video','images','documents','zips','jupyter_notebooks']
 
 
 ## Saving current working directory to variable
@@ -64,6 +66,9 @@ def file_type(file):
         shutil.move(file, f'{path}/documents')
     elif ext in zips:
         shutil.move(file, f'{path}/zips')
+    elif ext in jupyter_notes:
+        shutil.move(file, f'{path}/jupyter_notebooks')
+        
 
 
 
