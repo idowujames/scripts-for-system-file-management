@@ -44,15 +44,28 @@ folders = ['Software','Audio','Video','Images','Documents','Zips','Jupyter_Noteb
 path = os.getcwd()
 
 
-## Function to create the extension directories if they don't already exist on system 
+ 
 def create_folders():
+    """
+        Function to create the extension directories if they don't already exist on system.
+
+        Note: If the folder is not created prior to moving of the files,
+        the files will be corrupted 
+
+    """
     for folder in folders:
         if not os.path.exists(f'{path}/{folder}'):
             os.makedirs(f'{path}/{folder}')
     return folder
 
-## Function to move file based on extension to their respective directories
 def file_type(file):
+    """
+        Function to move file based on extension to their respective directories.
+      
+        Using absolute path in shutil.move() to avoid error raised if the same file 
+        already exist in destination folder
+
+    """
     ext = os.path.splitext(file)[1]
     if ext in software:
         shutil.move(os.path.join(path, file), os.path.join(f'{path}\Software', file))
