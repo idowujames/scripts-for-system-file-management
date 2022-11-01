@@ -9,7 +9,7 @@ logging.basicConfig(
     )
 
 ## Changing directory to point to the downloads folder
-os.chdir('C:/Users/DELL/Desktop/Test')
+os.chdir('C:/Users/DELL/Downloads')
 
 ## File Type & extensions for each file type in Dictionary
 files_type = { 
