@@ -8,4 +8,5 @@ I belive alot of people have made scripts like this as I'm guessing this types o
 
 
 Version 2 of the script uses the dictionary data structure to make the code more concise and maintainable.
+
 Running the scripts as cron jobs makes life alot easier as well :wink:
