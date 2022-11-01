@@ -4,7 +4,7 @@ import logging
 
 logging.basicConfig(
     level=logging.INFO ,
-    filename='file_management_script\logfile.log',
+    filename='logfile.log',
     format='%(asctime)s :: %(levelname)s :: %(message)s'
     )
 
