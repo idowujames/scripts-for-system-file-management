@@ -33,7 +33,7 @@ files_type = {
 
     'Zips' : ['.zip'],
 
-    'Jupyter_notes' : ['.ipynb']
+    'Jupyter_Notebooks' : ['.ipynb']
 
 }
 
@@ -51,19 +51,19 @@ def move_file(file_):
     ext = os.path.splitext(file)[1]
 
     # Iterating through the keys of the file_type dictionary
-    for folder in files_type:
+    for key in files_type:
 
         # If the extension is in the value of the key
-        if ext in files_type[folder]:
+        if ext in files_type[key]:
             #Check if the folder extension key exist, if not create it
-            if not os.path.exists(f'{path}/{folder}'):
-                os.makedirs(f'{path}/{folder}')
+            if not os.path.exists(f'{path}/{key}'):
+                os.makedirs(f'{path}/{key}')
 
             # Move the file using full path to avoid duplicate file error
-            shutil.move(os.path.join(path, file), os.path.join(f'{path}\{folder}', file))
+            shutil.move(os.path.join(path, file), os.path.join(f'{path}\{key}', file))
 
 
-## Calling the functions in a try & catch block and logging
+## Calling the function in a try & catch block and logging
 ## into file, if the script runs successfully or encounters an error
 try:
     for file in os.listdir():
